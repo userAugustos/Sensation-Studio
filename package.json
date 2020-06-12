@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "alertifyjs": "^1.13.1"
+  },
+  "name": "RPG",
+  "version": "1.0.0",
+  "description": "a RPG website with PHP for play RPG online ",
+  "main": "index.php",
+  "author": "Felipe Augustos <felipe_augustos84@outlook.com.br>",
+  "license": "MIT"
+}

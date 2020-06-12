@@ -1,0 +1,36 @@
+section.banner{
+	width: 100%;
+	height: 100vh;
+
+	position: relative;
+	background: url('../assets/parallax-image.png') no-repeat;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	color:$dark-grey;
+	@extend .default-application-padding;
+
+	img{
+		margin: 0 0 -2rem 5rem;
+		max-width: 18rem;
+	}
+	div{
+        margin: -2rem 0 0 3rem;
+        h2{
+            font-size: 3rem;
+            @extend .banner-margin-items;
+            font-family: 'Oswald', sans-serif;
+        }
+        h3{
+            font-size: 1.3rem;
+           @extend .banner-margin-items;
+        }
+        a{
+            color:$dark-pink;
+        }
+	}
+}
