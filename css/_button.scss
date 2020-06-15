@@ -2,22 +2,26 @@
     color: #fff;
     background: $dark-grey;
     @include box-shadow($dark-pink);
-    border-radius:12px;
-    padding: 1rem 2rem;
-    border-style: none;
+    @extend .default-button-style;
     font-weight: 600;
     letter-spacing: 1;
-    cursor: pointer;
 }
 .banner button{
     @extend .banner-margin-items;
     color: #fff;
     background: $dark-pink;
     @include box-shadow($dark-grey);
-    border-radius:12px;
-    padding: 1rem 2rem;
-    border-style: none;
+    @extend .default-button-style;
     font-weight: 600;
     letter-spacing: 1;
-    cursor: pointer;
+}
+.price button{
+    @extend .default-button-style;
+    font-weight: 600;
+    letter-spacing: 1;
+
+    &:hover{
+        @include box-shadow($dark-pink);
+        color: $barber-gold;
+    }
 }
