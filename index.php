@@ -46,13 +46,14 @@
     </div>
   </section>
   <main>
-		
+		<section class="hair-cards">
+    </section>  
   </main>
   <footer>
 
   </footer>
-  <script src="./node_modules/alertifyjs/src/js/alertify.js">
-  	
+  <script type="module" src="./js/var.js">
   </script>
+  <script type="module" src="./js/script.js"></script>
 </body>
 </html>

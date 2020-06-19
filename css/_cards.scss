@@ -1,0 +1,48 @@
+section.hair-cards{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+.hair-cards .card{
+    border-radius: 4px;
+    width: 30%;
+    min-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    color: $winter-white;
+    
+    margin: 1rem 0;
+    background: $dark-grey;
+    
+    div{
+        margin: 5px 0;
+        padding: 0.5rem;
+    }
+    span{
+        float: right;
+        margin-bottom: 5px;
+        color: $barber-gold;
+    }
+    img{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        height: 100%; 
+        max-height: 400px; 
+        width: 100%;
+    }
+    .price{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &:hover{
+        @include box-shadow($dark-pink);    
+    }
+}
