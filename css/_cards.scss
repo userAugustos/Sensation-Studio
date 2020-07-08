@@ -1,48 +1,48 @@
 section.hair-cards{
-    margin-top: 1rem;
+    margin: 1rem auto;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column-reverse;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
-    width: 100%;
+    padding: 1rem;
+    width: 60vw;
+    height: 80vh;
+
+    background: #ffffff;
+    box-shadow: 0px 0px 16px rgba(48, 47, 54, 0.5);
+    position: relative;
+
 }
 
 .hair-cards .card{
-    border-radius: 4px;
-    width: 30%;
-    min-width: 350px;
+    border: none;
+    border-bottom: .6px solid rgba(105, 105, 105, .4);
 
-    display: flex;
-    flex-direction: column;
-
-    color: $winter-white;
-    
-    margin: 1rem 0;
-    background: $dark-grey;
-    
-    div{
-        margin: 5px 0;
-        padding: 0.5rem;
-    }
-    span{
-        float: right;
-        margin-bottom: 5px;
-        color: $barber-gold;
-    }
+    display: flex;  
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px auto;
     img{
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        height: 100%; 
-        max-height: 400px; 
-        width: 100%;
+        border-radius: 5px;
+        height: 80%;   
     }
-    .price{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    &:hover{
-        @include box-shadow($dark-pink);    
+}
+.select-hair-cut{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin: -2.5rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button{
+        padding: .5rem 1.5rem;
+        border-radius: .5rem;
+        color: $winter-white;
+        background-color: $dark-grey;
     }
 }

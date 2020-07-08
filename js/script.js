@@ -1,24 +1,22 @@
-import {cardSection} from './var.js';
+import { cardSection, menu } from "./var.js";
 
-( async () => {
-	const cardsQTD = 6;
-  for(let i = 0; i < cardsQTD; i++){
-		cardSection.innerHTML += ` 
+window.addEventListener('scroll', event => {
+  if(window.scrollY >= 180){
+    menu.style.backgroundColor = '#1b1d21';
+    menu.style.color = '#e6eded';
+  }else{
+    menu.style.backgroundColor = 'transparent';
+    menu.style.color = '#1b1d21';
+  }
+});
+
+(async () => {
+  for (let index = 0; index < 10; index++) {    
+    cardSection.innerHTML +=`
       <div class="card">
-        <img src="./assets/men-cut.jpg" alt="corte-x" />
-        <div class="title">
-          <h2>Corte X</h2>
-        </div>
-        <div class="description">
-          <p>Corte X. Feito de forma X sendo assim pra X então X</p>
-        </div>
-        <div class="price">
-          <span>R$15,00</span>
-
-          <button type="button">Usar Cupom</button>
-        </div>
+        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png"/>
+        <p>nome corte</p>
       </div>
-		`
-	}
-})()
-
+    `;
+  }
+})();

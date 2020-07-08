@@ -1,3 +1,4 @@
-'use strict';
+"use strict";
 
-export const cardSection = document.querySelector('.hair-cards');
+export const cardSection = document.querySelector("section.hair-cards");
+export const menu = document.querySelector('header#home');
