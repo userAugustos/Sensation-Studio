@@ -1,4 +1,4 @@
-.default-application-padding, section.banner, header div ul li, header {
+.default-application-padding, section.banner, header div ul li {
   padding: 1rem 1.5rem;
 }
 
@@ -6,10 +6,14 @@
   margin: 12px 0;
 }
 
-.default-button-style, .price button, .banner button, #menu button {
+.default-button-style, .hair-cards button, .price button, .banner button, #menu button {
   border-style: none;
   border-radius: 12px;
   padding: 0.6rem 1.4rem;
+}
+
+.hidden {
+  transform: translateX(-100%);
 }
 
 * {
@@ -42,6 +46,7 @@ img {
 
 button {
   cursor: pointer;
+  outline: none;
 }
 
 header {
@@ -53,13 +58,14 @@ header {
   position: fixed;
   background: transparent;
   color: #1b1d21;
+  padding: 5px;
 }
 header div {
   max-width: 980px;
   margin: auto 20px;
 }
 header div img {
-  width: 12rem;
+  width: 10rem;
   height: 4rem;
 }
 header div ul {
@@ -79,9 +85,26 @@ header div ul a {
 header div ul a:hover {
   box-shadow: 4px 4px 6px -2px rgba(27, 29, 33, 0.8);
   transition: 0.6s;
-  background-color: #e6eded;
   padding: 0.3rem 1.5rem;
   margin: auto auto;
+}
+@media screen and (max-width: 845px) {
+  header {
+    width: 90%;
+    justify-self: self-end;
+    flex-direction: column;
+    height: 100vh;
+    background: #1b1d21;
+  }
+  header div:nth-child(1) {
+    display: none;
+  }
+  header div:nth-child(2) {
+    color: #e6eded;
+  }
+  header div:nth-child(2) ul {
+    flex-direction: column;
+  }
 }
 
 section.banner {
@@ -115,7 +138,7 @@ section.banner div a {
 }
 
 #menu button {
-  color: #fff;
+  color: #e6eded;
   background: #1b1d21;
   box-shadow: 4px 4px 6px -2px rgba(207, 56, 83, 0.8);
   font-weight: 600;
@@ -123,7 +146,7 @@ section.banner div a {
 }
 
 .banner button {
-  color: #fff;
+  color: #e6eded;
   background: #cf3853;
   box-shadow: 4px 4px 6px -2px rgba(27, 29, 33, 0.8);
   font-weight: 600;
@@ -137,6 +160,21 @@ section.banner div a {
 .price button:hover {
   box-shadow: 4px 4px 6px -2px rgba(207, 56, 83, 0.8);
   color: #f3fa2f;
+}
+
+.hair-cards button {
+  position: absolute;
+  top: 95%;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px -2px rgba(207, 56, 83, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.hair-cards button svg {
+  color: black;
+  margin-right: 5px;
 }
 
 section.hair-cards {
@@ -153,35 +191,23 @@ section.hair-cards {
   box-shadow: 0px 0px 16px rgba(48, 47, 54, 0.5);
   position: relative;
 }
-
-.hair-cards .card {
+section.hair-cards .card {
   border: none;
-  border-bottom: 0.6px solid rgba(105, 105, 105, 0.4);
+  border-bottom: 0.6px solid rgba(48, 47, 54, 0.5);
   display: flex;
-  padding: 5px 10px;
+  padding: 0.5rem 0.8rem;
   align-items: center;
   justify-content: space-between;
   margin: 5px auto;
 }
-.hair-cards .card img {
+section.hair-cards .card img {
   border-radius: 5px;
   height: 80%;
 }
-
-.select-hair-cut {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  margin: -2.5rem auto 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.select-hair-cut button {
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
-  color: #e6eded;
-  background-color: #1b1d21;
+@media screen and (max-width: 845px) {
+  section.hair-cards .card:nth-child(n+7):nth-child(-n+10) {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

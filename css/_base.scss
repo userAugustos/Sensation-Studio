@@ -2,7 +2,11 @@ $dark-grey: #1b1d21;
 $winter-white: #e6eded;
 $dark-pink: #cf3853;
 $barber-gold: #f3fa2f;
+$darked-shadow: rgba(48, 47, 54, 0.5);
 
+$average-break: 845px;
+$large-break: 1019px;
+$small-break: 680px;
 
 @mixin box-shadow($color) {
 	box-shadow: 4px 4px 6px -2px rgba($color, 0.8);
@@ -19,7 +23,9 @@ $barber-gold: #f3fa2f;
   border-radius:12px;
   padding: .6rem 1.4rem;
 }
-
+.hidden{
+  transform: translateX(-100%);
+}
 *{
   box-sizing: border-box;
   padding: 0;
@@ -45,4 +51,5 @@ img{
 }
 button{
   cursor: pointer;
+  outline: none;
 }

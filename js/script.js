@@ -1,22 +1,9 @@
-import { cardSection, menu } from "./var.js";
+import { menu, selectCutButton } from "./var.js";
 
-window.addEventListener('scroll', event => {
-  if(window.scrollY >= 180){
-    menu.style.backgroundColor = '#1b1d21';
-    menu.style.color = '#e6eded';
-  }else{
-    menu.style.backgroundColor = 'transparent';
-    menu.style.color = '#1b1d21';
-  }
-});
 
 (async () => {
-  for (let index = 0; index < 10; index++) {    
-    cardSection.innerHTML +=`
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png"/>
-        <p>nome corte</p>
-      </div>
-    `;
-  }
+  Array.from(selectCutButton).map(button => button.addEventListener('click', event => window.location.replace('/view/haircuts.php'))) 
+  //criando um array apartir de um nodelist para poder mapear ele, nodelists não podem receber o paramêtro map
+  //se não passar o event pro window.location ele irá executar ao carregar a pagina
+  window.screen.width.addEventListener('change', event => console.log(event))
 })();
