@@ -1,48 +1,36 @@
 section.hair-cards{
-    margin-top: 1rem;
+    margin: 1rem auto;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column-reverse;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
-    width: 100%;
-}
+    padding: 1rem;
+    width: 60vw;
+    height: 80vh;
 
-.hair-cards .card{
-    border-radius: 4px;
-    width: 30%;
-    min-width: 350px;
+    background: #ffffff;
+    box-shadow: 0px 0px 16px $darked-shadow;
+    position: relative;
 
-    display: flex;
-    flex-direction: column;
-
-    color: $winter-white;
+    .card{
+        border: none;
+        border-bottom: .6px solid $darked-shadow;
     
-    margin: 1rem 0;
-    background: $dark-grey;
-    
-    div{
-        margin: 5px 0;
-        padding: 0.5rem;
-    }
-    span{
-        float: right;
-        margin-bottom: 5px;
-        color: $barber-gold;
-    }
-    img{
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        height: 100%; 
-        max-height: 400px; 
-        width: 100%;
-    }
-    .price{
-        display: flex;
+        display: flex;  
+        padding: .5rem .8rem;
         align-items: center;
         justify-content: space-between;
-    }
-    &:hover{
-        @include box-shadow($dark-pink);    
+        margin: 5px auto;
+        img{
+            border-radius: 5px;
+            height: 80%;   
+        }
+        @media screen and (max-width: $average-break) {
+            &:nth-child(n+7):nth-child(-n+10){
+                display: none;
+            }
+        }
     }
 }

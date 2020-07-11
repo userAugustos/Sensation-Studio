@@ -1,5 +1,5 @@
 #menu button{
-    color: #fff;
+    color: $winter-white;
     background: $dark-grey;
     @include box-shadow($dark-pink);
     @extend .default-button-style;
@@ -8,7 +8,7 @@
 }
 .banner button{
     @extend .banner-margin-items;
-    color: #fff;
+    color: $winter-white;
     background: $dark-pink;
     @include box-shadow($dark-grey);
     @extend .default-button-style;
@@ -23,5 +23,20 @@
     &:hover{
         @include box-shadow($dark-pink);
         color: $barber-gold;
+    }
+}
+.hair-cards button{
+    position: absolute;
+    top: 95%;
+    @extend .default-button-style;
+    padding: .6rem 1rem;
+    border-radius: 5px;
+    @include box-shadow($dark-pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    svg{
+        color:black;
+        margin-right: 5px;
     }
 }

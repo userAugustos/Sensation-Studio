@@ -1,24 +1,9 @@
-import {cardSection} from './var.js';
+import { menu, selectCutButton } from "./var.js";
 
-( async () => {
-	const cardsQTD = 6;
-  for(let i = 0; i < cardsQTD; i++){
-		cardSection.innerHTML += ` 
-      <div class="card">
-        <img src="./assets/men-cut.jpg" alt="corte-x" />
-        <div class="title">
-          <h2>Corte X</h2>
-        </div>
-        <div class="description">
-          <p>Corte X. Feito de forma X sendo assim pra X então X</p>
-        </div>
-        <div class="price">
-          <span>R$15,00</span>
 
-          <button type="button">Usar Cupom</button>
-        </div>
-      </div>
-		`
-	}
-})()
-
+(async () => {
+  Array.from(selectCutButton).map(button => button.addEventListener('click', event => window.location.replace('/view/haircuts.php'))) 
+  //criando um array apartir de um nodelist para poder mapear ele, nodelists não podem receber o paramêtro map
+  //se não passar o event pro window.location ele irá executar ao carregar a pagina
+  window.screen.width.addEventListener('change', event => console.log(event))
+})();
