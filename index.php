@@ -24,7 +24,7 @@
     <div>
       <img src="./assets/logo-complete-name.png" alt="logo">
     </div>
-    <div id="menu">
+    <nav id="menu">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#cuts">Cortes</a></li>
@@ -41,10 +41,13 @@
           </button>
         <?php endif; ?>
       </ul>
+    </nav>
+    <div class="toggle-menu">
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
   </header>
 
-  <section class="banner">
+  <section class="banner" id="home">
 
     <img src="./assets/logo-only-S.png" alt="banner">
 
@@ -59,56 +62,63 @@
     </div>
   </section>
   <main>
-    <section class="hair-cards">
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
+    <section class="hair-cards" id="#cuts">
+      <img src="./assets/hair-cut.png" alt="style" id="style">
+      <div class="ad">
+        <h4>Escolha os cortes ao seu estilo</h4>
+        <h4>Especifique o que vc busca</h4>
       </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
-        <p>nome corte</p>
-        <p>............R$15,00</p>
+      <div class="cards">
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/cotton/64/000000/short-hair-sexy-woman.png" />
+          <p>nome corte</p>
+          <p>............R$15,00</p>
+        </div>
       </div>
       <button type="button" id="select-hair-cut">
         <i class="fas fa-cut"></i>
@@ -117,7 +127,15 @@
     </section>
 
     <section class="online-announcement">
-
+      <img src="./assets/tudo-pelo-celular.png" alt="online">
+      <div class="announcement">
+        <h1>Na Sensation você pode fazer tudo pelo site!<i class="fas fa-mobile"></i> </h1>
+        <h3>Crie uma conta para começar</h3>
+        <p>Como usuario <i class="fas fa-user"></i> <br /> você pode marcar cortes <br />favoritar estilos de cortes <br />salvar seu historicode cortes e gostos para cortes futuros</p>
+        <button type="button">
+          <i class="fas fa-sign-in-alt"></i>Entrar
+        </button>
+      </div>
     </section>
   </main>
   <footer>

@@ -6,12 +6,11 @@ $darked-shadow: rgba(48, 47, 54, 0.5);
 
 $average-break: 845px;
 $large-break: 1019px;
-$small-break: 680px;
+$small-break: 580px;
 
 @mixin box-shadow($color) {
 	box-shadow: 4px 4px 6px -2px rgba($color, 0.8);
 }
-
 .default-application-padding{
   padding: 1rem 1.5rem;
 }
@@ -23,8 +22,15 @@ $small-break: 680px;
   border-radius:12px;
   padding: .6rem 1.4rem;
 }
-.hidden{
-  transform: translateX(-100%);
+.bleachWithe{
+  &:hover, &:focus{
+    background: #ffffff;
+    box-shadow: 0px 0px 16px $darked-shadow;
+  }
+
+}
+.show{
+  transform: translateX(-8%);
 }
 *{
   box-sizing: border-box;
@@ -37,6 +43,7 @@ body{
   font-size: 100%;
   height: 100%;
   width: 100%;
+  background: #E0E0DE;
 }
 li, a{
   list-style: none;
@@ -52,4 +59,7 @@ img{
 button{
   cursor: pointer;
   outline: none;
+}
+section{
+  transition: .5s;
 }
