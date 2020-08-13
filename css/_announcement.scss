@@ -10,6 +10,11 @@ section.online-announcement{
   justify-content: space-around;
   align-items: flex-start;
 
+  @media screen and (max-width: $small-break){
+    p, h3, h1 svg{
+      display: none;
+    }
+  }
   img{
     max-height: 60vh;
   }

@@ -2,9 +2,9 @@
   class Connection {
 
     function __construct(){
-
-    }
       
+    }
+    
   }
 
 ?>

@@ -94,13 +94,12 @@ header {
 			top: 2px;
 			color: #fff;
 			z-index: 99999;
-      width: 1.5rem;
-      height: 1.5rem;
       display: inline;
       margin: 5px;
       svg {
-        width: 100% !important;
-        height: 100%;
+        width: 25px !important;
+        height: 25px;
+        color: $dark-grey;
 			}
 			cursor: pointer;
     }

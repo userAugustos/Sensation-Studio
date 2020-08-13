@@ -26,10 +26,12 @@ section.hair-cards {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    @media screen and (max-width: $average-break) {
+
+    @media screen and (max-width: $small-break) {
       width: 90%;
-      height: 60vh;
+      height: 50vh;
       overflow-y: scroll;
+      flex-wrap: nowrap;
     }
     .card {
       border: none;

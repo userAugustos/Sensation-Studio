@@ -3,20 +3,8 @@
 
 <head>
   <title>Sensation</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="shortcut icon" href="../assets/logo-only-S.png">
-
-  <link rel="stylesheet" href="./node_modules/alertifyjs/build/css/alertify.min.css">
-  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap">
-
-  <link rel="stylesheet" href="./css/main.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <?php require_once($_SERVER["DOCUMENT_ROOT"] . '/view/header.php')?>
 </head>
 
 <body>
@@ -137,13 +125,37 @@
         </button>
       </div>
     </section>
+
+    <section class="contact-us">
+      <fieldset>
+        <legend> Alguma Duvida? </legend>
+        <span>Deixe-nos uma mensagem</span>
+
+        <form action="" method="post">
+          <div id="input-group">
+            <input type="text" name="name" id="name" required>
+            <label for="name"> Seu Nome </label>
+          </div>
+          <div id="input-group">
+            <input type="tel" name="whatsapp" pattern="[0-9]{2} [0-9]{9}" maxlength="11" title="O numero não é valido" required>
+            <label for="whatsapp"> Numero de Contato </label>
+          </div>
+          <div id="input-group">
+            <textarea name="message" id="message" cols="30" rows="3"></textarea>
+            <label for="message"> O que tem pra nós? </label>
+          </div>
+          <div id="submit">
+            <button type="submit"> Enviar </button>
+            <span>Suas mensagens serão respondidas em algumas horas</span>
+          </div>
+        </form>
+      </fieldset>
+    </section>
   </main>
   <footer>
 
   </footer>
   <script src="./node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
-  <script type="module" src="./js/var.js">
-  </script>
   <script type="module" src="./js/script.js"></script>
 </body>
 

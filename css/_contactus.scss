@@ -1,0 +1,77 @@
+main section.contact-us{
+  width: 95%;
+  padding: 1rem;
+  margin: 10px auto;
+
+  background: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  fieldset{
+    border: 0;
+  }
+  legend{
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+  span{
+    margin-top: -1.2rem;
+  }
+  form{
+    margin: 20px auto;
+  }
+  div#submit{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    button{
+      border: none;
+      border-radius: 8px;
+      background: $dark-pink;
+      color: $dark-grey;
+      width: 90%;
+      margin: 10px auto;
+      height: 2rem;
+      font: 700 1rem;
+    }
+    span{
+      margin-top: 5px;
+      font-size: 0.8rem;
+      color: $darked-shadow;
+    }
+  }
+  div#input-group{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    label{
+      color: $darked-shadow;
+      left: 2%;
+      top: 32%;
+      position: absolute;
+    }
+    input{
+      height: 2rem;
+    }
+    textarea{
+      height: 3rem;
+    }
+    input, textarea{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid $dark-grey;
+      border-radius: 4px;
+      padding: 1rem 1rem 0.3rem 1rem;
+      outline: none;
+    }
+    input:focus ~ label, input:valid ~ label, textarea:focus ~ label{
+      font-size: 0.7rem;
+      transition: 0.3s;
+      left: 1%;
+      top: 22%;
+    }
+  }
+}

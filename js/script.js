@@ -1,4 +1,10 @@
-import { menu, selectCutButton, toggleMenuButton, navMenu } from "./var.js";
+const selector = document.querySelector.bind(document);
+const selectorAll = document.querySelectorAll.bind(document); 
+
+const menu = selector('header#home');
+const selectAllCutButton  = selectorAll('button#select-hair-cut');
+const toggleMenuButton = selector('div.toggle-menu');
+const navMenu = selector('nav#menu');
 
 (async () => {
   if (screen.width >= 845) {
@@ -12,12 +18,12 @@ import { menu, selectCutButton, toggleMenuButton, navMenu } from "./var.js";
       }
     });
   }
-  toggleMenuButton.addEventListener('click', event => {navMenu.classList.toggle('show')})
-  Array.from(selectCutButton).map((button) =>
-    button.addEventListener("click", (event) =>
+
+  toggleMenuButton.addEventListener('click', event => { navMenu.classList.toggle('show') });
+
+  Array.from(selectAllCutButton).map((button) => /*criando um array apartir de um nodelist para poder mapear ele, nodelists não podem receber o paramêtro map */
+    button.addEventListener("click", (event) => //se não passar o event pro window.location ele irá executar ao carregar a pagina
       window.location.replace("/view/haircuts.php")
     )
-  ); //criando um array apartir de um nodelist para poder mapear ele, nodelists não podem receber o paramêtro map
-  //se não passar o event pro window.location ele irá executar ao carregar a pagina
-
+  );
 })();
