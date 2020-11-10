@@ -1,4 +1,4 @@
-.default-application-padding, section.banner, header div ul li {
+.default-application-padding, section.banner, header ul li {
   padding: 1rem 1.5rem;
 }
 
@@ -12,8 +12,13 @@
   padding: 0.6rem 1.4rem;
 }
 
-.hidden {
-  transform: translateX(-100%);
+.bleachWithe:hover, .bleachWithe:focus {
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(48, 47, 54, 0.5);
+}
+
+.show {
+  transform: translateX(-8%);
 }
 
 * {
@@ -22,12 +27,23 @@
   margin: 0;
 }
 
+body, html {
+  max-width: 100vw !important;
+  overflow-x: hidden;
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 100%;
-  height: 100%;
-  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: #E0E0DE;
+}
+
+main {
+  max-width: 100vw;
 }
 
 li, a {
@@ -49,6 +65,10 @@ button {
   outline: none;
 }
 
+section {
+  transition: 0.5s;
+}
+
 header {
   z-index: 2;
   width: 100%;
@@ -60,56 +80,94 @@ header {
   color: #1b1d21;
   padding: 5px;
 }
-header div {
+header div,
+header nav {
   max-width: 980px;
   margin: auto 20px;
+  transition: 0.6s;
 }
-header div img {
+header div img,
+header nav img {
   width: 10rem;
   height: 4rem;
 }
-header div ul {
+header ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
-header div ul li {
+header ul li {
   margin: auto 10px;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1;
 }
-header div ul a {
+header ul a {
   border-radius: 8px;
 }
-header div ul a:hover {
+header ul a:hover {
   box-shadow: 4px 4px 6px -2px rgba(27, 29, 33, 0.8);
   transition: 0.6s;
   padding: 0.3rem 1.5rem;
   margin: auto auto;
 }
+header .toggle-menu {
+  display: none;
+}
 @media screen and (max-width: 845px) {
   header {
-    width: 90%;
-    justify-self: self-end;
-    flex-direction: column;
-    height: 100vh;
-    background: #1b1d21;
+    padding: 0;
+    max-height: 100px;
   }
   header div:nth-child(1) {
     display: none;
   }
-  header div:nth-child(2) {
+  header nav {
+    width: 90vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    justify-self: self-end;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-110%);
+    background: #1b1d21;
     color: #e6eded;
+    padding: 1rem;
   }
-  header div:nth-child(2) ul {
+  header nav ul {
+    height: 80%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    box-shadow: 4px 6px 6px 0px #e4ca;
+  }
+  header .toggle-menu {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #fff;
+    z-index: 99999;
+    display: inline;
+    margin: 5px;
+    cursor: pointer;
+  }
+  header .toggle-menu svg {
+    width: 25px !important;
+    height: 25px;
+    color: #1b1d21;
   }
 }
 
 section.banner {
   width: 100%;
-  height: 100vh;
   position: relative;
   background: url("../assets/parallax-image.png") no-repeat;
   background-size: cover;
@@ -120,11 +178,11 @@ section.banner {
   color: #1b1d21;
 }
 section.banner img {
-  margin: 0 0 -2rem 5rem;
+  margin: 10rem 0 -2rem 0;
   max-width: 18rem;
 }
 section.banner div {
-  margin: -2rem 0 0 3rem;
+  margin: 1rem 0 1rem 3rem;
 }
 section.banner div h2 {
   font-size: 3rem;
@@ -136,6 +194,14 @@ section.banner div h3 {
 section.banner div a {
   color: #cf3853;
 }
+@media screen and (max-width: 845px) {
+  section.banner img {
+    margin: 0 0 -2rem 0;
+  }
+  section.banner div {
+    margin: 0;
+  }
+}
 
 #menu button {
   color: #e6eded;
@@ -143,6 +209,11 @@ section.banner div a {
   box-shadow: 4px 4px 6px -2px rgba(207, 56, 83, 0.8);
   font-weight: 600;
   letter-spacing: 1;
+}
+@media screen and (max-width: 845px) {
+  #menu button {
+    padding: 1rem 2.5rem;
+  }
 }
 
 .banner button {
@@ -165,6 +236,7 @@ section.banner div a {
 .hair-cards button {
   position: absolute;
   top: 95%;
+  left: 56%;
   padding: 0.6rem 1rem;
   border-radius: 5px;
   box-shadow: 4px 4px 6px -2px rgba(207, 56, 83, 0.8);
@@ -177,37 +249,207 @@ section.banner div a {
   margin-right: 5px;
 }
 
-section.hair-cards {
-  margin: 1rem auto;
+.online-announcement button {
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
   align-items: center;
+  padding: 0.5rem 2.3rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 4px 4px 6px -2px rgba(243, 250, 47, 0.8);
+  position: absolute;
+  top: 80%;
+  right: 10%;
+}
+
+section.hair-cards {
+  display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
-  width: 60vw;
+  padding: 1rem 2rem;
+  width: 100%;
   height: 80vh;
   background: #ffffff;
   box-shadow: 0px 0px 16px rgba(48, 47, 54, 0.5);
   position: relative;
 }
-section.hair-cards .card {
+@media (max-width: 845px) {
+  section.hair-cards {
+    width: 100%;
+    height: 100vh;
+  }
+  section.hair-cards button {
+    left: 30%;
+  }
+}
+section.hair-cards div.ad {
+  margin: 4rem 0 0 1rem;
+}
+section.hair-cards div.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 580px) {
+  section.hair-cards div.cards {
+    width: 90%;
+    height: 50vh;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+  }
+}
+section.hair-cards div.cards .card {
   border: none;
   border-bottom: 0.6px solid rgba(48, 47, 54, 0.5);
+  max-width: 280px;
+  width: 100%;
   display: flex;
   padding: 0.5rem 0.8rem;
   align-items: center;
   justify-content: space-between;
-  margin: 5px auto;
+  margin: 5px 15px;
 }
-section.hair-cards .card img {
+section.hair-cards div.cards .card img {
   border-radius: 5px;
   height: 80%;
 }
+section.hair-cards img#style {
+  position: relative;
+  top: 4rem;
+  max-height: 70%;
+}
+@media screen and (max-width: 580px) {
+  section.hair-cards img#style {
+    margin-top: -3rem;
+    width: 8rem;
+    height: 10rem;
+  }
+}
 @media screen and (max-width: 845px) {
-  section.hair-cards .card:nth-child(n+7):nth-child(-n+10) {
+  section.hair-cards img#style {
+    width: 10rem;
+    height: 12rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+section.online-announcement {
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(48, 47, 54, 0.5);
+  position: relative;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+@media screen and (max-width: 580px) {
+  section.online-announcement p, section.online-announcement h3, section.online-announcement h1 svg {
     display: none;
   }
+}
+section.online-announcement img {
+  max-height: 60vh;
+}
+section.online-announcement div {
+  padding: 1rem;
+  height: 100%;
+}
+section.online-announcement div h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+section.online-announcement div h3 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+section.online-announcement div p {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+section.online-announcement div svg {
+  margin: auto 5px;
+}
+
+main section.contact-us {
+  width: 95%;
+  padding: 1rem;
+  margin: 10px auto;
+  background: #ffffff;
+  border: 0;
+  border-radius: 8px;
+}
+main section.contact-us fieldset {
+  border: 0;
+}
+main section.contact-us legend {
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+main section.contact-us span {
+  margin-top: -1.2rem;
+}
+main section.contact-us form {
+  margin: 20px auto;
+}
+main section.contact-us div#submit {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main section.contact-us div#submit button {
+  border: none;
+  border-radius: 8px;
+  background: #cf3853;
+  color: #1b1d21;
+  width: 90%;
+  margin: 10px auto;
+  height: 2rem;
+  font: 700 1rem;
+}
+main section.contact-us div#submit span {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: rgba(48, 47, 54, 0.5);
+}
+main section.contact-us div#input-group {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main section.contact-us div#input-group label {
+  color: rgba(48, 47, 54, 0.5);
+  left: 2%;
+  top: 32%;
+  position: absolute;
+}
+main section.contact-us div#input-group input {
+  height: 2rem;
+}
+main section.contact-us div#input-group textarea {
+  height: 3rem;
+}
+main section.contact-us div#input-group input, main section.contact-us div#input-group textarea {
+  width: 100%;
+  margin: 10px;
+  border: 1px solid #1b1d21;
+  border-radius: 4px;
+  padding: 1rem 1rem 0.3rem 1rem;
+  outline: none;
+}
+main section.contact-us div#input-group input:focus ~ label, main section.contact-us div#input-group input:valid ~ label, main section.contact-us div#input-group textarea:focus ~ label {
+  font-size: 0.7rem;
+  transition: 0.3s;
+  left: 1%;
+  top: 22%;
 }
 
 /*# sourceMappingURL=main.css.map */

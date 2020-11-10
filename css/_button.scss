@@ -1,42 +1,61 @@
-#menu button{
-    color: $winter-white;
-    background: $dark-grey;
-    @include box-shadow($dark-pink);
-    @extend .default-button-style;
-    font-weight: 600;
-    letter-spacing: 1;
+#menu button {
+  color: $winter-white;
+  background: $dark-grey;
+  @include box-shadow($dark-pink);
+  @extend .default-button-style;
+  font-weight: 600;
+  letter-spacing: 1;
+  @media screen and (max-width: $average-break) {
+    padding: 1rem 2.5rem;
+  }
 }
-.banner button{
-    @extend .banner-margin-items;
-    color: $winter-white;
-    background: $dark-pink;
-    @include box-shadow($dark-grey);
-    @extend .default-button-style;
-    font-weight: 600;
-    letter-spacing: 1;
+.banner button {
+  @extend .banner-margin-items;
+  color: $winter-white;
+  background: $dark-pink;
+  @include box-shadow($dark-grey);
+  @extend .default-button-style;
+  font-weight: 600;
+  letter-spacing: 1;
 }
-.price button{
-    @extend .default-button-style;
-    font-weight: 600;
-    letter-spacing: 1;
+.price button {
+  @extend .default-button-style;
+  font-weight: 600;
+  letter-spacing: 1;
 
-    &:hover{
-        @include box-shadow($dark-pink);
-        color: $barber-gold;
-    }
-}
-.hair-cards button{
-    position: absolute;
-    top: 95%;
-    @extend .default-button-style;
-    padding: .6rem 1rem;
-    border-radius: 5px;
+  &:hover {
     @include box-shadow($dark-pink);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    svg{
-        color:black;
-        margin-right: 5px;
-    }
+    color: $barber-gold;
+  }
+}
+.hair-cards button {
+  position: absolute;
+  top: 95%;
+  left: 56%;
+  @extend .default-button-style;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  @include box-shadow($dark-pink);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  svg {
+    color: black;
+    margin-right: 5px;
+  }
+}
+.online-announcement button {
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 2.3rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  @include box-shadow($barber-gold);
+
+  position: absolute;
+  top: 80%;
+  right: 10%;
 }
