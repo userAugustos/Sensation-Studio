@@ -53,8 +53,7 @@ header {
     div:nth-child(1) {
       display: none;
     }
-    nav {
-			
+    nav {	
       width: 90vw;
 			height: 100vh;
 			
@@ -92,14 +91,13 @@ header {
 			position: absolute;
 			left: 0;
 			top: 2px;
-			color: #fff;
 			z-index: 99999;
       display: inline;
       margin: 5px;
       svg {
         width: 25px !important;
         height: 25px;
-        color: $dark-grey;
+        color: $dark-pink;
 			}
 			cursor: pointer;
     }

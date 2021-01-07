@@ -4,7 +4,7 @@
 <head>
   <title>Sensation</title>
 
-  <?php require_once($_SERVER["DOCUMENT_ROOT"] . '/view/header.php')?>
+  <?php require_once($_SERVER["DOCUMENT_ROOT"] . '/header.php')?>
 </head>
 
 <body>
@@ -16,9 +16,9 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#cuts">Cortes</a></li>
-        <li><a href="#appointment">Marque um Horário</a></li>
 
         <?php if ($_SESSION['isLogeed']) : ?>
+          <li><a href="#appointment">Marque um Horário</a></li>
           <div id="user_info">
             <img src="<?$_SESSION['user_img']?>" alt="">
             <p><?= $_SESSION['user_name'] ?></p>
@@ -31,7 +31,7 @@
       </ul>
     </nav>
     <div class="toggle-menu">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+      <i class="fa fa-bars" aria-hidden="true" id="menu-icon"></i>
     </div>
   </header>
 
@@ -42,7 +42,7 @@
     <div class="text-banner">
       <h2>Na Sensation buscamos atendimento de <br />primeira para o cliente</h2>
       <h3>Aqui você corta ao seu estilo</h3>
-      <button type="button" id="select-hair-cut">Selecionar Corte</button>
+      <a href="#cuts"><button type="button" id="select-hair-cut">Selecionar Corte</button></a>
       <br />
       <span>
         Temos uma seção de avalição também <a href="#contact">Avaliar</a>
@@ -50,11 +50,11 @@
     </div>
   </section>
   <main>
-    <section class="hair-cards" id="#cuts">
+    <section class="hair-cards" id="cuts">
       <img src="./assets/hair-cut.png" alt="style" id="style">
       <div class="ad">
         <h4>Escolha os cortes ao seu estilo</h4>
-        <h4>Especifique o que vc busca</h4>
+        <h4>Especifique o que você busca</h4>
       </div>
       <div class="cards">
         <div class="card">
@@ -130,30 +130,14 @@
       <fieldset>
         <legend> Alguma Duvida? </legend>
         <span>Deixe-nos uma mensagem</span>
-
-        <form action="" method="post">
-          <div id="input-group">
-            <input type="text" name="name" id="name" required>
-            <label for="name"> Seu Nome </label>
-          </div>
-          <div id="input-group">
-            <input type="tel" name="whatsapp" pattern="[0-9]{2} [0-9]{9}" maxlength="11" title="O numero não é valido" required>
-            <label for="whatsapp"> Numero de Contato </label>
-          </div>
-          <div id="input-group">
-            <textarea name="message" id="message" cols="30" rows="3"></textarea>
-            <label for="message"> O que tem pra nós? </label>
-          </div>
-          <div id="submit">
-            <button type="submit"> Enviar </button>
-            <span>Suas mensagens serão respondidas em algumas horas</span>
-          </div>
-        </form>
+          
       </fieldset>
     </section>
   </main>
-  <footer>
 
+  <footer>
+    <h2>Sensation Studio 2020.</h2>
+    <a href="#">Onde fica a Sensation?</a>
   </footer>
   <script src="./node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
   <script type="module" src="./js/script.js"></script>
