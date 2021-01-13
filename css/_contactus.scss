@@ -16,4 +16,27 @@ main section.contact-us{
   span{
     margin-top: -1.2rem;
   }
+  div#whatsapp{
+    margin: 10px 0;
+    width: 100%;
+    a{
+      max-width: 50%;
+      border-radius: 6px;
+      height: 12vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #40E773;
+      align-self: center;
+      justify-self: center;
+      margin-left: 25%;
+      box-shadow: 2px 5px 5px rgb(31, 221, 31);
+    }
+    img{
+      margin: 0 5px 0 0;
+      width: 5vw;
+      align-self: center;
+    }
+  }
 }

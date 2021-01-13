@@ -271,6 +271,7 @@ section.hair-cards {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 2rem;
+  overflow-y: overlay;
   width: 100%;
   height: 80vh;
   background: #ffffff;
@@ -396,6 +397,29 @@ main section.contact-us legend {
 }
 main section.contact-us span {
   margin-top: -1.2rem;
+}
+main section.contact-us div#whatsapp {
+  margin: 10px 0;
+  width: 100%;
+}
+main section.contact-us div#whatsapp a {
+  max-width: 50%;
+  border-radius: 6px;
+  height: 12vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #40E773;
+  align-self: center;
+  justify-self: center;
+  margin-left: 25%;
+  box-shadow: 2px 5px 5px #1fdd1f;
+}
+main section.contact-us div#whatsapp img {
+  margin: 0 5px 0 0;
+  width: 5vw;
+  align-self: center;
 }
 
 footer {

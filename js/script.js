@@ -22,7 +22,7 @@ window.onload = () => {
 
   Array.from(selectAllCutButton).map((button) => /*criando um array apartir de um nodelist para poder mapear ele, nodelists não podem receber o paramêtro map */
     button.addEventListener("click", (event) => { //se não passar o event pro window.location ele irá executar ao carregar a pagina
-      window.scroll()
+      window.location.replace('../view/login.php')
     })
   );
 }

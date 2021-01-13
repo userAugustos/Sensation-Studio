@@ -108,10 +108,14 @@
           <p>............R$15,00</p>
         </div>
       </div>
-      <button type="button" id="select-hair-cut">
-        <i class="fas fa-cut"></i>
-        escolher corte
-      </button>
+      <?php if ($_SESSION['isLogeed']) : ?>
+        <button type="button" id="select-hair-cut">
+          <i class="fas fa-cut"></i>
+            escolher corte
+          </button>
+      <?php else : ?>
+        <p> Faça Login para escolher um corte </p>
+      <?php endif; ?>
     </section>
 
     <section class="online-announcement">
@@ -130,7 +134,12 @@
       <fieldset>
         <legend> Alguma Duvida? </legend>
         <span>Deixe-nos uma mensagem</span>
-          
+        <div id="whatsapp">
+          <a href=" https://wa.me/11993757541">
+          <img src="./assets/whatsapp-icon.svg" alt="whatsapp">
+            whatsapp
+          </a>
+        </div>
       </fieldset>
     </section>
   </main>
